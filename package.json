@@ -1,5 +1,5 @@
 {
-  "name": "L0",
+  "name": "L100",
   "version": "0.0.1",
   "description": "Compiler as a service.",
   "author": "Art Compiler LLC",
@@ -51,8 +51,8 @@
     "test": "jest build/",
     "watch": "npx nodemon -w src -w index.js -w package.json --exec make",
     "lambda:zip": "zip -r function.zip . -x=.git/*",
-    "lambda:update": "aws lambda update-function-code --function-name L0 --zip-file fileb://function.zip",
+    "lambda:update": "aws lambda update-function-code --function-name L100 --zip-file fileb://function.zip",
     "deploy:lambda": "npm run build && npm run lambda:zip && npm run lambda:update",
-    "deploy:gcloud": "gcloud functions deploy L0 --trigger-http --runtime=nodejs10 --entry-point=compiler"
+    "deploy:gcloud": "gcloud functions deploy L100 --trigger-http --runtime=nodejs10 --entry-point=compiler"
   }
 }
